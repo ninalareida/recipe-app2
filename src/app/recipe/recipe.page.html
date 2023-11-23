@@ -19,7 +19,11 @@
         <p>{{ recipe.instructions }}</p>
       </ion-label>
 
+      <!-- Edit button -->
+      <ion-button (click)="editRecipe(recipe)">Edit</ion-button>
 
+      <!-- Delete button -->
+      <ion-button (click)="deleteRecipe(recipe.id)">Delete</ion-button>
 
     </ion-item>
   </ion-list>

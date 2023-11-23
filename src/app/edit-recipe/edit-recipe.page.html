@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Edit Recipe</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="recipe.title" name="title" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Instructions</ion-label>
+      <ion-textarea [(ngModel)]="recipe.instructions" name="instructions" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Image URL</ion-label>
+      <ion-input [(ngModel)]="recipe.image" name="image" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="saveChanges()">Save Changes</ion-button>
+</ion-content>

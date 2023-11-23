@@ -101,9 +101,23 @@ export class SupabaseService {
     return data
   }
 
+  async deleteRecipe(recipeId: number): Promise<void> {
+    try {
+      const { data, error } = await this.supabase
+        .from(RECIPE_TABLE)
+        .delete()
+        .eq('id', recipeId);
 
+      if (error) {
+        throw error;
+      }
 
-
+      console.log('Recipe deleted successfully:', data);
+    } catch (error) {
+      console.error('Error deleting recipe:', error);
+      throw error; // You might want to handle this error in the component
+    }
+  }
 
 
   /*
