@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Supermarket
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let supermarket of supermarkets">
+      <ion-label>
+        <h2>{{ supermarket.name }}</h2>
+        <p>{{ supermarket.info }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Breitengrad</ion-label>
+      {{ latitude }}
+    </ion-item>
+    <ion-item>
+      <ion-label>Längengrad</ion-label>
+      {{ longitude }}
+    </ion-item>
+  </ion-list>
+
+  <ion-button fill="clear" (click)="getCurrentPosition()">Standort abfragen</ion-button>
+</ion-content>
+<!-- 
+<ion-content>
+  <!- Your supermarket list goes here ->
+  <ion-list>
+    <ion-item *ngFor="let supermarket of supermarkets">
+      <ion-label>
+        <h2>{{ supermarket.name }}</h2>
+        <p>{{ supermarket.info }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Geolocation</ion-card-title>
+    </ion-card-header>
+  
+      <ion-list>
+        <ion-item>
+          <ion-label>Breitengrad</ion-label>
+          {{ latitude }}
+        </ion-item>
+        <ion-item>
+          <ion-label>Längengrad</ion-label>
+          {{ longitude }}
+        </ion-item>
+        <ion-item>
+          <ion-label>Höhe ü. Meer</ion-label>
+          {{ altitude }}
+        </ion-item>
+      </ion-list>
+  
+    <ion-button fill="clear" (click)="getCurrentPosition()">Standort abfragen</ion-button>
+    <ion-button fill="clear" (click)="resetPosition()">Reset</ion-button>
+  </ion-card>
+</ion-content>
+-->

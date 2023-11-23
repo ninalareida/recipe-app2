@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Recipe App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+  <!-- 
+  <ion-tab tab="tab1">
+    <ion-nav [root]="/tabs/tab1"></ion-nav>
+  </ion-tab>
+
+  <ion-tab tab="tab2">
+    <ion-nav [root]="/tabs/tab2"></ion-nav>
+  </ion-tab>
+
+  <ion-tab tab="tab3">
+    <ion-nav [root]="/tabs/tab3"></ion-nav>
+  </ion-tab>
+  -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="recipe" href="/tabs/trecipe">
+      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
+      <ion-label>Recipe</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="createnew" href="/tabs/createnew">
+      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
+      <ion-label>Create New</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="supermarket" href="/tabs/supermarket">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Supermarket</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+<!-- 
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Recipe App
+    </ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-tabs>
+  <ion-tab-bar slot="botton">
+    <ion-tab-button tab="tab1" href="/tabs/tab1">
+      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
+      <ion-label>Tab 1</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" href="/tabs/tab2">
+      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
+      <ion-label>Tab 2</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" href="/tabs/tab3">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+-->

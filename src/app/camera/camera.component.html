@@ -1,0 +1,16 @@
+<ion-card>
+
+  <img *ngIf="imageUrl" [src]="imageUrl" />
+
+  <ion-button fill="clear"
+    (click)="takePicture()">
+    Picture
+  </ion-button>
+
+  <ion-button fill="clear"
+    *ngIf="imageUrl"
+    (click)="resetPicture()">
+    Reset
+  </ion-button>
+
+</ion-card>

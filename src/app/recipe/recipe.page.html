@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Recipe
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button onClick="window.location.reload();">Refresh Page</ion-button>
+  <!-- Your recipe list goes here -->
+  <ion-list>
+    <ion-item *ngFor="let recipe of recipes">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="recipe.image"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.instructions }}</p>
+      </ion-label>
+
+
+
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+<!--
+<ion-content [fullscreen]="true">
+  <!-
+  <ion-header collapse="condense">
+    <ion-toolbar>
+
+      <ion-title size="large">Recipe</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  ->
+  <ion-item>
+    <ion-title>Pasta</ion-title><br>
+    <ion-text>
+      <p>fdash</p>
+      <p>dkjln</p>
+    </ion-text>
+  </ion-item>
+
+  <app-explore-container name="Recipe page"></app-explore-container>
+</ion-content>
+-->

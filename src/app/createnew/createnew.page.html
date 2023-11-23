@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Create New
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="saveRecipe()" [formGroup]="recipeForm">
+
+    <ion-input
+      label="Title"
+      labelPlacement="floating"
+      errorText="Title is missing"
+      formControlName="title"
+      [required]="true"></ion-input>
+    <ion-input
+      label="Instructions"
+      labelPlacement="floating"
+      errorText="Instructions are missing"
+      formControlName="instructions"
+      [required]="true"></ion-input>
+
+    <app-camera (imageChanged)="handleImageChange($event)"></app-camera>
+
+
+    <ion-button
+      type="submit"
+      fill="clear">Save
+    </ion-button>
+  </form>
+
+  
+</ion-content>
+
